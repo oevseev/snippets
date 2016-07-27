@@ -8,6 +8,8 @@ void topsort(int start, vector<int> &res)
     s.push(start);
     visited[start] = true;
 
+    auto beg = res.end();
+
     while (!s.empty()) {
         int u = s.top(), k = cur[u];
 
@@ -26,5 +28,5 @@ void topsort(int start, vector<int> &res)
         }
     }
 
-    reverse(res.begin(), res.end());
+    reverse(beg, res.end());
 }

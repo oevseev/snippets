@@ -16,7 +16,7 @@ int sum(int l, int r)
     return res;
 }
 
-int add(int i, int n)
+void add(int i, int n)
 {
     i += MAXN;
     while (i > 0) {
