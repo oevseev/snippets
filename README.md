@@ -27,6 +27,7 @@ contestant himself.
 - **Graph theory** (`graph_theory/`)
     - Breadth-first search (`bfs.cpp`)
     - Depth-first search (`dfs.cpp`)
+    - Dijkstra's algorithm (`dijkstra.cpp`)
     - Topological sort (`topsort.cpp`)
 - **Number theory** (`number_theory/`)
     - Modular exponentiation (`mod_exp.cpp`)
