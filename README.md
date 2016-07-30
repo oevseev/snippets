@@ -25,6 +25,7 @@ contestant himself.
 - **Computational geometry** (`geometry/`)
     - Point/vector structure w/ operations (`point.cpp`)
 - **Graph theory** (`graph_theory/`)
+    - Bellman-Ford algoritm (`bellman_ford.cpp`)
     - Breadth-first search (`bfs.cpp`)
     - Depth-first search (`dfs.cpp`)
     - Dijkstra's algorithm (`dijkstra.cpp`)
