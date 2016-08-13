@@ -1,7 +1,7 @@
 vector<int> adj[MAXN];
 bool visited[MAXN];
 
-void dfs(int start)
+void bfs(int start)
 {
     queue<int> q;
     q.push(start);

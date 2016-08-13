@@ -1,10 +1,12 @@
-vector<int> adj[MAXN];
-int n, m, d[MAXN], w[MAXN][MAXN];
+typedef priority_queue<pair<int, int>, vector<pair<int, int>>,
+    greater<pair<int, int>>> min_priority_queue;
+
+vector<pair<int, int>> adj[MAXN];
+int n, m, d[MAXN];
 
 void dijkstra(int start)
 {
-    priority_queue<pair<int, int>, vector<pair<int, int>>,
-        greater<pair<int, int>>> q;
+    min_priority_queue q;
 
     fill_n(d, n, INT_MAX);
     q.push(make_pair(0, start));
@@ -16,11 +18,11 @@ void dijkstra(int start)
 
         if (p > d[u]) continue;
 
-        for (int v : adj[u]) {
-            int dst = p + w[u][v];
-            if (dst < d[v]) {
-                d[v] = dst;
-                q.push(make_pair(dst, v));
+        for (auto e : adj[u]) {
+            int dst = p + e.second;
+            if (dst < d[e.first]) {
+                d[e.first] = dst;
+                q.push(make_pair(dst, e.first));
             }
         }
     }

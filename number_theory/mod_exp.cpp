@@ -1,14 +1,10 @@
-const int MOD = 1e9 + 7;
-
-int mpow(int n, int p)
+int mpow(int n, int p, int m)
 {
-    int res = 1;
-
+    int res = 1 % m;
     while (p) {
-        if (p & 1) res = (res * 1LL * n) % MOD;
-        n = (n * 1LL * n) % MOD;
+        if (p & 1) res = (res * 1LL * n) % m;
+        n = (n * 1LL * n) % m;
         p >>= 1;
     }
-
     return res;
 }
