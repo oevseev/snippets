@@ -1,5 +1,5 @@
-vector<int> adj[MAXN];
 bool visited[MAXN];
+vector<int> adj[MAXN];
 
 void dfs(int start)
 {

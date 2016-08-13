@@ -3,7 +3,7 @@ struct Point
     int64_t x;
     int64_t y;
 
-    Point() : x(0), y(0) {}
+    Point() : x(0LL), y(0LL) {}
     Point(int64_t _x, int64_t _y) : x(_x), y(_y) {}
 
     inline Point operator=(Point other) {

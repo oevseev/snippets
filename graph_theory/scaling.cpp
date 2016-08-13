@@ -1,5 +1,5 @@
-bool visited[MAXN];
 int n, c[MAXN][MAXN], f[MAXN][MAXN];
+bool visited[MAXN];
 
 bool try_augment(int u, int t, int m)
 {

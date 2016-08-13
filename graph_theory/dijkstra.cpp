@@ -1,8 +1,8 @@
 typedef priority_queue<pair<int, int>, vector<pair<int, int>>,
     greater<pair<int, int>>> min_priority_queue;
 
-vector<pair<int, int>> adj[MAXN];
 int n, m, d[MAXN];
+vector<pair<int, int>> adj[MAXN];
 
 void dijkstra(int start)
 {

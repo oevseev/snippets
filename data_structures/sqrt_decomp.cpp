@@ -1,4 +1,4 @@
-int a[MAXN], s[SQRT_MAXN], n, sqrt_n;
+int n, sqrt_n, a[MAXN], s[SQRT_MAXN];
 
 int sum(int l, int r)
 {

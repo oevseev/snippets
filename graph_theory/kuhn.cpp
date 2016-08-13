@@ -1,4 +1,4 @@
-int im[MAXN], mt[MAXN];
+int n, im[MAXN], mt[MAXN];
 bool visited[MAXN];
 vector<int> adj[MAXN];
 

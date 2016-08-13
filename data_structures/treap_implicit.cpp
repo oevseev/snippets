@@ -2,8 +2,9 @@ mt19937 gen;
 
 struct Node {
     Node *l = nullptr, *r = nullptr;
+
     int x, y = gen(), size = 1;
-    int64_t sum = 0;
+    int64_t sum;
     bool rev = false;
 
     Node(int _x) : x(_x), sum(_x) {}
@@ -44,14 +45,18 @@ Treap push(Treap t)
 
 Treap find(Treap t, int k)
 {
-    if (!t) return -1;
-    push(t);
+    if (!t)
+        return -1;
 
+    push(t);
     int idx = sz(t->l);
 
-    if (idx >= k) return find(t->l, k);
-    else if (idx < k - 1) return find(t->r, k - idx - 1);
-    else return t;
+    if (idx >= k)
+        return find(t->l, k);
+    else if (idx < k - 1)
+        return find(t->r, k - idx - 1);
+    else
+        return t;
 }
 
 Treap merge(Treap a, Treap b)
@@ -73,9 +78,10 @@ Treap merge(Treap a, Treap b)
 
 ptt split(Treap t, int k)
 {
-    if (!t) return make_pair(nullptr, nullptr);
-    push(t);
+    if (!t)
+        return make_pair(nullptr, nullptr);
 
+    push(t);
     int idx = sz(t->l);
 
     if (idx >= k) {
@@ -93,6 +99,7 @@ ptt split(Treap t, int k)
 Treap insert(Treap t, int k, int x)
 {
     ptt p = split(t, k);
+
     return merge(p.first, merge(new Node(x), p.second));
 }
 
@@ -100,5 +107,6 @@ Treap erase(Treap t, int k)
 {
     ptt p = split(t, k - 1);
     ptt q = split(p.second, 1);
+
     return merge(p.first, q.second);
 }

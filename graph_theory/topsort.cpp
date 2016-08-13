@@ -1,6 +1,6 @@
-vector<int> adj[MAXN];
 int cur[MAXN];
 bool visited[MAXN];
+vector<int> adj[MAXN];
 
 void topsort(int start, vector<int> &res)
 {
