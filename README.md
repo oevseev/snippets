@@ -38,6 +38,7 @@ contestant himself.
     - Fold-Fulkerson max-flow method with scaling (`scaling.cpp`)
     - Topological sort (`topsort.cpp`)
 - **Number theory** (`number_theory/`)
+    - Fast Fourier transform (`fft.cpp`)
     - Modular exponentiation (`mod_exp.cpp`)
     - Sieve of Eratosthenes (`sieve.cpp`)
     - Extended GCD algorithm (`xgcd.cpp`)
