@@ -17,8 +17,8 @@
 #include <ctime>
 #include <deque>
 #include <functional>
-#include <iostream>
 #include <iomanip>
+#include <iostream>
 #include <map>
 #include <queue>
 #include <random>
@@ -50,7 +50,7 @@ using namespace std;
 #define C(x) get<2>(x)
 
 #ifdef DEBUG
-    #define db(x) cerr << #x << " = " << (x) << endl, fflush(stderr)
+    #define db(x) cerr << #x << " = " << (x) << endl
     #define eprintf(...) fprintf(stderr, __VA_ARGS__), fflush(stderr)
 #else
     #define db(x) ;
