@@ -66,10 +66,15 @@ inline int rnd(int x)
 
 typedef long long ll;
 typedef long double ld;
+typedef unsigned int uint;
+typedef unsigned long long ull;
+
 typedef complex<double> cd;
 typedef pair<int, int> pii;
+typedef pair<ll, ll> pll;
 typedef tuple<int, int, int> tiii;
 typedef vector<int> vi;
+typedef vector<vector<int>> vvi;
 
 const int INF = (int)1.01e9;
 const int MOD = 1000000007;
