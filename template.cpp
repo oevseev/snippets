@@ -51,10 +51,15 @@ using namespace std;
 
 #ifdef DEBUG
     #define db(x) cerr << #x << " = " << (x) << endl
+    #define db2(x, y) cerr << #x << " = " << (x) << ", " << #y << \
+        " = " << (y) << endl
     #define eprintf(...) fprintf(stderr, __VA_ARGS__), fflush(stderr)
+    #define eputs(s) eprintf("%s\n", (s))
 #else
     #define db(x) ;
+    #define db2(x, y) ;
     #define eprintf(...) ;
+    #define eputs(s) ;
 #endif
 
 mt19937 gen;
@@ -73,7 +78,10 @@ typedef complex<double> cd;
 typedef pair<int, int> pii;
 typedef pair<ll, ll> pll;
 typedef tuple<int, int, int> tiii;
+typedef tuple<ll, ll, ll> tlll;
 typedef vector<int> vi;
+typedef vector<pii> vii;
+typedef vector<tiii> viii;
 typedef vector<vector<int>> vvi;
 
 const int INF = (int)1.01e9;
