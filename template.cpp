@@ -95,7 +95,7 @@ const double PI = acos(-1);
 
 bool solve()
 {
-    return false;
+    return true;
 }
 
 int main()

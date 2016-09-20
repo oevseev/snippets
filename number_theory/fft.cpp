@@ -3,9 +3,8 @@ typedef complex<double> cd;
 void fft(vector<cd> &a, bool inv)
 {
     int n = (int)a.size();
-    int j = 0;
 
-    for (int i = 1; i < n; i++) {
+    for (int i = 1, j = 0; i < n; i++) {
         int t = n >> 1;
         for (; j >= t; t >>= 1)
             j -= t;
@@ -16,7 +15,7 @@ void fft(vector<cd> &a, bool inv)
     for (int len = 2; len <= n; len <<= 1) {
         int z = (inv ? -1 : 1);
         double angle = 2 * M_PI / len * z;
-        cd wlen(cos(angle), sin(angle));
+        cd w0(cos(angle), sin(angle));
 
         for (int i = 0; i < n; i += len) {
             cd w(1, 0);
@@ -25,7 +24,7 @@ void fft(vector<cd> &a, bool inv)
                 cd u = a[i + j], v = w * a[i + j + len/2];
                 a[i + j] = u + v;
                 a[i + j + len / 2] = u - v;
-                w *= wlen;
+                w *= w0;
             }
         }
     }
