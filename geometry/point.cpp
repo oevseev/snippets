@@ -20,6 +20,14 @@ struct Point
         return {x - other.x, y - other.y};
     }
 
+    inline int64_t operator*(Point other) {
+        return x * other.x + y * other.y;
+    }
+
+    inline int64_t operator%(Point other) {
+        return x * other.y - y * other.x;
+    }
+
     inline bool operator==(Point other) {
         return (x == other.x) && (y == other.y);
     }
@@ -37,14 +45,6 @@ struct Point
     }
 };
 
-inline int64_t dot(Point a, Point b) {
-    return a.x * b.x + a.y * b.y;
-}
-
-inline int64_t cross(Point a, Point b) {
-    return a.x * b.y - a.y * b.x;
-}
-
 inline int64_t dist_sq(Point a) {
     return a.x * a.x + a.y * a.y;
 }
@@ -58,7 +58,7 @@ inline double angle(Point a, Point b) {
 }
 
 inline double vsin(Point a, Point b) {
-    return cross(a, b) / dist(a) / dist(b);
+    return a * b / dist(a) / dist(b);
 }
 
 inline double vcos(Point a, Point b) {
