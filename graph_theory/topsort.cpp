@@ -1,32 +1,26 @@
-int cur[MAXN];
+int n, cur, res[MAXN];
 bool visited[MAXN];
 vector<int> adj[MAXN];
 
-void topsort(int start, vector<int> &res)
+void dfs(int u)
 {
-    stack<int> s;
-    s.push(start);
-    visited[start] = true;
+    if (visited[u]) return;
+    visited[u] = true;
 
-    auto beg = res.end();
+    for (int v : adj[u])
+        dfs(v);
+    res[cur++] = u;
+}
 
-    while (!s.empty()) {
-        int u = s.top(), k = cur[u];
+void topsort()
+{
+    cur = 0;
+    fill_n(visited, MAXN, false);
 
-        while (k < adj[u].size() && visited[adj[u][k]])
-            k++;
-        cur[u] = k;
-
-        if (k < adj[u].size()) {
-            int v = adj[u][k];
-            s.push(v);
-            visited[v] = true;
-        }
-        else {
-            res.push_back(u);
-            s.pop();
-        }
+    for (int i = 0; i < n; i++) {
+        int old = cur;
+        if (!visited[i])
+            dfs(i);
+        reverse(res + old, res + cur);
     }
-
-    reverse(beg, res.end());
 }
