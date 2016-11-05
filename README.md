@@ -34,6 +34,7 @@ contestant himself.
     - Dijkstra's algorithm (`dijkstra.cpp`)
     - Edmonds-Karp max-flow algorithm (`edmonds_karp.cpp`)
     - Floyd-Warshall algorithm (`floyd_warshall.cpp`)
+    - Kosaraju's algorithm for finding SCC (`kosaraju.cpp`)
     - Kuhn's maximum bipartite matching algorithm (`kuhn.cpp`)
     - Fold-Fulkerson max-flow method with scaling (`scaling.cpp`)
     - Topological sort (`topsort.cpp`)

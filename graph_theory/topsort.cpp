@@ -9,6 +9,7 @@ void dfs(int u)
 
     for (int v : adj[u])
         dfs(v);
+
     res[cur++] = u;
 }
 
@@ -17,10 +18,10 @@ void topsort()
     cur = 0;
     fill_n(visited, MAXN, false);
 
-    for (int i = 0; i < n; i++) {
-        int old = cur;
+    for (int i = 1; i <= n; i++) {
         if (!visited[i])
             dfs(i);
-        reverse(res + old, res + cur);
     }
+
+    reverse(res, res + cur);
 }
