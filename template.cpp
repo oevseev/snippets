@@ -2,6 +2,7 @@
 
 #ifdef _MSC_VER
 #define _CRT_SECURE_NO_WARNINGS
+#pragma comment(linker, "/STACK:67108864")
 #endif
 
 #include <algorithm>
@@ -28,16 +29,18 @@
 #include <stack>
 #include <string>
 #include <tuple>
-#include <utility>
-#include <vector>
 #include <unordered_map>
 #include <unordered_set>
+#include <utility>
+#include <vector>
 
 using namespace std;
 
 #define all(x) (x).begin(), (x).end()
 #define forn(i, n) for (int i = 0; i < (int)(n); i++)
 #define forb(i, n) for (int i = (int)(n) - 1; i >= 0; i--)
+#define forn1(i, n) for (int i = 1; i <= (int)(n); i++)
+#define forb1(i, n) for (int i = (int)(n); i > 0; i--)
 #define forab(i, a, b) for (int i = (int)(a); i <= (int)(b); i++)
 #define mp make_pair
 #define mt make_tuple
