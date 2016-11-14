@@ -32,6 +32,7 @@
 #include <unordered_map>
 #include <unordered_set>
 #include <utility>
+#include <valarray>
 #include <vector>
 
 using namespace std;
@@ -42,6 +43,7 @@ using namespace std;
 #define forn1(i, n) for (int i = 1; i <= (int)(n); i++)
 #define forb1(i, n) for (int i = (int)(n); i > 0; i--)
 #define forab(i, a, b) for (int i = (int)(a); i <= (int)(b); i++)
+#define forba(i, b, a) for (int i = (int)(b); i >= (int)(a); i--)
 #define mp make_pair
 #define mt make_tuple
 #define pb push_back
