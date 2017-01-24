@@ -39,8 +39,10 @@ contestant himself.
     - Fold-Fulkerson max-flow method with scaling (`scaling.cpp`)
     - Topological sort (`topsort.cpp`)
 - **Number theory** (`number_theory/`)
+	- Euler's phi function (`euler_phi.cpp`)
     - Fast Fourier transform (`fft.cpp`)
-    - Modular exponentiation (`mod_exp.cpp`)
+    - Modular exponentiation (`mpow.cpp`)
+    - Overflow-safe exponentiation (`opow.cpp`)
     - Sieve of Eratosthenes (`sieve.cpp`)
     - Extended GCD algorithm (`xgcd.cpp`)
 
@@ -48,3 +50,7 @@ contestant himself.
 
 * Provide the repository with more snippets (obviously)
 * Preface the snippets with meaningful commentaries on the specifics
+* Include range-update & range-query RMQ/RSQ segment trees
+* Include more algorithms on graphs
+* Include solutions for common dynamic programming problems (LCS, LIS, edit
+distance, knapsack variations)
